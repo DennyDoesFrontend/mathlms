@@ -65,17 +65,17 @@
         <div class="dark-bg">
           <div class="login-modal">
             <i class="ri-close-large-line close"></i>
-            <form>
-              <label for="index_number">
-                Index Number
+            <div class="form">
+              <label for="emailAddress">
+                Email Address
                 <input
-                  id="indexNumber"
+                  id="emailAddress"
                   class="index-number"
-                  type="text"
-                  placeholder="eg. 10245698"
+                  type="email"
+                  placeholder="eg. me@sattar.com"
                 />
               </label>
-              <label for="index_number">
+              <label for="password">
                 Password
                 <input id="password" type="password" class="password" />
               </label>
@@ -87,11 +87,12 @@
               <p>forgot password?</p>
               <p class="or">OR</p>
               <button class="blue-btn">Log in as a teacher</button>
-            </form>
+            </div>
           </div>
         </div>
       </main>
     </div>
     <script type="module" src="/src/main.js"></script>
+    <script src="/src/script.js"></script>
   </body>
 </html>

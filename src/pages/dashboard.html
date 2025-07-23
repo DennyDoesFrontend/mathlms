@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathLMS - Kids Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="ri-function-line"></i>
+          </div>
+          <div class="logo-text">MathLMS</div>
+        </div>
+
+        <div class="navigation-label">Navigation</div>
+
+        <div class="nav-links">
+          <div class="nav-link active" data-page="dashboard">
+            <i class="ri-dashboard-3-line"></i>
+            <span>Dashboard</span>
+          </div>
+          <div class="nav-link" data-page="learn">
+            <i class="ri-book-open-line"></i>
+            <span>Learn</span>
+          </div>
+          <div class="nav-link" data-page="history">
+            <i class="ri-history-line"></i>
+            <span>History</span>
+          </div>
+          <div class="nav-link" data-page="class">
+            <i class="ri-group-line"></i>
+            <span>Class</span>
+          </div>
+          <div class="nav-link" data-page="ranks">
+            <i class="ri-trophy-line"></i>
+            <span>Ranks</span>
+          </div>
+          <div class="nav-link" data-page="report">
+            <i class="ri-file-chart-line"></i>
+            <span>Report</span>
+          </div>
+        </div>
+
+        <button class="action-button">
+          <i class="ri-play-circle-line"></i>
+          Report a Problem
+        </button>
+
+        <div class="sign-out">
+          <div class="sign-out-link" data-page="signout">
+            <i class="ri-logout-box-line"></i>
+            <span>Sign Out</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">Main Content Area</div>
+    </div>
+
+    <script>
+      // Navigation functionality
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          // Remove active class from all nav links
+          document
+            .querySelectorAll(".nav-link")
+            .forEach((l) => l.classList.remove("active"));
+
+          // Add active class to clicked link
+          this.classList.add("active");
+
+          // Get the page type
+          const page = this.getAttribute("data-page");
+          console.log("Navigating to:", page);
+        });
+      });
+
+      // Action button functionality
+      document
+        .querySelector(".action-button")
+        .addEventListener("click", function () {
+          this.style.transform = "translateY(0px) scale(0.98)";
+          setTimeout(() => {
+            this.style.transform = "translateY(-1px) scale(1)";
+          }, 100);
+
+          console.log("Start Learning clicked");
+        });
+
+      // Sign out functionality
+      document
+        .querySelector(".sign-out-link")
+        .addEventListener("click", function () {
+          console.log("Sign out clicked");
+          // Add sign out logic here
+        });
+    </script>
+  </body>
+</html>

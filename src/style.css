@@ -197,21 +197,21 @@ nav .right a {
     background-color: var(--yellow);
 }
 
-.login-modal form {
+.login-modal .form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 2.5rem;
 }
 
-.login-modal form label {
+.login-modal .form label {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     font-size: 1.5rem;
 }
 
-.login-modal form label input {
+.login-modal .form label input {
     padding: 0.8rem 0.8rem;
     min-width: 300px;
     width: 100%;
@@ -222,12 +222,12 @@ nav .right a {
     border-radius: 50px;
 }
 
-.login-modal form p {
+.login-modal .form p {
     color: var(--lightblue);
     text-align: right;
 }
 
-.login-modal form .or {
+.login-modal .form .or {
     color: black;
     font-size: 1.5rem;
     text-align: center;
