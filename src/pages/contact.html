@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/contact.css" />
+    <title>MathLMS</title>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav class="margin">
+      <div class="left">
+        <img src="/logo.png" alt="logo" />
+        <h3><a href="../index.html">MathLMS</a></h3>
+      </div>
+      <div class="right">
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/contact.html">Contact Us</a>
+      </div>
+      <button class="yellow-btn logInBtn">Log In</button>
+      <i class="ri-menu-line hamburger"></i>
+    </nav>
+    <!-- contact form -->
+    <section class="margin">
+      <form>
+        <div>
+          <h1>Send Us A Message</h1>
+          <p>We usually reply between 1 to 2 working days</p>
+        </div>
+        <div class="input">
+          <label for="email">
+            <span>Enter Email Address</span>
+            <input type="email" placeholder="eg. myemailaddress@email.com" />
+          </label>
+          <label for="message">
+            <span>Enter Message</span>
+            <textarea name="message" id="message"></textarea>
+          </label>
+          <button class="yellow-btn">Submit</button>
+        </div>
+      </form>
+    </section>
+    <!-- login screen modal -->
+    <div class="dark-bg">
+      <div class="login-modal">
+        <i class="ri-close-large-line close"></i>
+        <form>
+          <label for="index_number">
+            Index Number
+            <input type="text" placeholder="eg. 10245698" />
+          </label>
+          <label for="index_number">
+            Password
+            <input type="password" />
+          </label>
+          <button class="yellow-btn">
+            <a href="./dashboard.html">Student Login</a>
+          </button>
+          <p>forgot password?</p>
+          <p class="or">OR</p>
+          <button class="blue-btn">Log in as a teacher</button>
+        </form>
+      </div>
+    </div>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>
