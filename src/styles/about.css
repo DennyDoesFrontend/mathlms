@@ -1,7 +1,7 @@
 @import url("/src/style.css");
  
 body {
-    background-color: var(--lightblue);
+    background-color: var(--blue);
     background-image: url("/bg.png");
 }
 

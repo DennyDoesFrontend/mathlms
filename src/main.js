@@ -15,10 +15,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app); // initialise firebase authentication
 
-/* === variables === */
-const logInBtn = document.querySelector(".logIn-btn");
-const signOutBtn = document.getElementById("sign-out-btn");
-
 /* === sign in function === */
 function authSignInWithEmail() {
   const email = document.getElementById("emailAddress").value;
@@ -35,28 +31,7 @@ function authSignInWithEmail() {
     });
 }
 
-/* === sign out function === */
-function authSignOut() {
-  signOut(auth)
-    .then(() => {
-      window.location.href = "/index.html";
-    })
-    .catch((error) => {
-      // An error happened.
-      console.log(error);
-    });
-}
+/* === Sign in and Log out buttons */
+const logInBtn = document.querySelector(".logIn-btn");
 
-/* === login button press === */
-document.addEventListener("DOMContentLoaded", () => {
-  const logInBtn = document.querySelector(".logIn-btn");
-  const signOutBtn = document.getElementById("sign-out-btn");
-
-  if (logInBtn) {
-    logInBtn.addEventListener("click", authSignInWithEmail);
-  }
-
-  if (signOutBtn) {
-    signOutBtn.addEventListener("click", authSignOut);
-  }
-});
+logInBtn.addEventListener("click", authSignInWithEmail);
