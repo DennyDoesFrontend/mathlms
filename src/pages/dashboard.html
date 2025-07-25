@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="/src/styles/dashboard.css" />
   </head>
   <body>
+    <div class="float-sidebar">
+      <img src="/menu.svg" alt="menu" />
+      <p>Welcome to MathLMS!</p>
+      <div></div>
+    </div>
     <div class="container">
       <div class="sidebar">
         <div class="logo">
@@ -47,10 +52,6 @@
             <i class="ri-trophy-line"></i>
             <span>Ranks</span>
           </div>
-          <div class="nav-link" data-page="report">
-            <i class="ri-file-chart-line"></i>
-            <span>Report</span>
-          </div>
         </div>
 
         <button class="action-button">
@@ -65,162 +66,165 @@
           </div>
         </div>
       </div>
-      <!-- dashboard content -->
-      <div class="dashboard">
-        <div class="left">
-          <div class="header">
-            <h3 class="dashboard-header">
-              Multiply the Fun! Your Multiplication Adventure Begins Here!
-            </h3>
-            <p>
-              Practice your times tables and become a Math Master. Learn
-              multiplication the fun way—one game at a time!
-            </p>
-            <button class="quiz-btn">Start Quiz</button>
-          </div>
-          <div class="games">
-            <h3>Gaming Hub</h3>
-            <div class="cards">
-              <div class="card">
-                <img src="/imageHere.png" alt="game image" />
-                <div class="info-holder">
-                  <div class="name">
-                    <h4>Maths Drill</h4>
-                    <p>Difficulty - Easy</p>
+      <div class="main-content">
+        <div class="dashboard">
+          <div class="left">
+            <div class="greeting">Welcome, let's start learning</div>
+            <div class="header">
+              <h3 class="dashboard-header">
+                Multiply the Fun! Your Multiplication Adventure Begins Here!
+              </h3>
+              <p>
+                Practice your times tables and become a Math Master. Learn
+                multiplication the fun way—one game at a time!
+              </p>
+              <button class="quiz-btn">Start Learning</button>
+            </div>
+            <div class="games">
+              <h3>Gaming Hub</h3>
+              <div class="cards">
+                <div class="card">
+                  <img src="/imageHere.png" alt="game image" />
+                  <div class="info-holder">
+                    <div class="name">
+                      <h4>Maths Drill</h4>
+                      <p>Difficulty - Easy</p>
+                    </div>
+                    <div class="score">
+                      <!-- <img src="/coin.png" alt="coin" /> -->
+                      <p class="points">+50 points</p>
+                    </div>
                   </div>
-                  <div class="score">
-                    <img src="/coin.png" alt="coin" />
-                    <p class="points">+50 points</p>
-                  </div>
+                  <button class="play">Play</button>
                 </div>
-                <button class="play">Play</button>
-              </div>
-              <div class="card">
-                <img src="/imageHere.png" alt="game image" />
-                <div class="info-holder">
-                  <div class="name">
-                    <h4>Maths Hero</h4>
-                    <p>Difficulty - Medium</p>
+                <div class="card">
+                  <img src="/imageHere.png" alt="game image" />
+                  <div class="info-holder">
+                    <div class="name">
+                      <h4>Maths Hero</h4>
+                      <p>Difficulty - Medium</p>
+                    </div>
+                    <div class="score">
+                      <!-- <img src="/coin.png" alt="coin" /> -->
+                      <p class="points">+70 points</p>
+                    </div>
                   </div>
-                  <div class="score">
-                    <img src="/coin.png" alt="coin" />
-                    <p class="points">+70 points</p>
-                  </div>
+                  <button class="soon">Coming Soon</button>
                 </div>
-                <button class="soon">Coming Soon</button>
-              </div>
-              <div class="card">
-                <img src="/imageHere.png" alt="game image" />
-                <div class="info-holder">
-                  <div class="name">
-                    <h4>Maths Race</h4>
-                    <p>Difficulty - Hard</p>
+                <div class="card">
+                  <img src="/imageHere.png" alt="game image" />
+                  <div class="info-holder">
+                    <div class="name">
+                      <h4>Maths Race</h4>
+                      <p>Difficulty - Hard</p>
+                    </div>
+                    <div class="score">
+                      <!-- <img src="/coin.png" alt="coin" /> -->
+                      <p class="points">+100 points</p>
+                    </div>
                   </div>
-                  <div class="score">
-                    <img src="/coin.png" alt="coin" />
-                    <p class="points">+100 points</p>
-                  </div>
+                  <button class="soon">Coming Soon</button>
                 </div>
-                <button class="soon">Coming Soon</button>
               </div>
             </div>
           </div>
-        </div>
-        <div class="right">
-          <div class="leaderboard">
-            <div class="title">
-              <h3>Leaderboard</h3>
-              <button>See All</button>
-            </div>
-            <table class="headings">
-              <th>Name</th>
-              <th>Score</th>
-              <th>Rank</th>
-              <tr>
-                <td>@sasha_makuyana</td>
-                <td>19800</td>
-                <td>1<small>st</small></td>
-              </tr>
-              <tr>
-                <td>@yusra_sattar</td>
-                <td>18700</td>
-                <td>2<small>nd</small></td>
-              </tr>
-              <tr>
-                <td>@denzel_ashitey</td>
-                <td>17800</td>
-                <td>3<small>rd</small></td>
-              </tr>
-              <tr>
-                <td>@ernest_kumu</td>
-                <td>17000</td>
-                <td>4<small>th</small></td>
-              </tr>
-              <tr>
-                <td>@enoch_nsiedo</td>
-                <td>16800</td>
-                <td>5<small>th</small></td>
-              </tr>
-              <tr>
-                <td>@rodney_papi</td>
-                <td>15800</td>
-                <td>6<small>th</small></td>
-              </tr>
-              <tr>
-                <td>@monica_mills</td>
-                <td>14800</td>
-                <td>7<small>th</small></td>
-              </tr>
-            </table>
-          </div>
-          <div class="history">
-            <div class="title">
-              <h3>History</h3>
-              <button>See All</button>
-            </div>
-            <div class="history-card">
-              <div class="quiz">
-                <img src="/small-quizimage.png" alt="quiz" />
-                <div class="text">
-                  <div class="quiz-title">Math Drill</div>
-                  <div class="difficulty">Easy</div>
-                </div>
+          <div class="right">
+            <div class="leaderboard">
+              <div class="title">
+                <h3>Leaderboard</h3>
+                <button>See All</button>
               </div>
-              <div class="quiz-score">45 points</div>
+              <table class="headings">
+                <th>Name</th>
+                <th>Score</th>
+                <th>Rank</th>
+                <tr>
+                  <td>@sasha_makuyana</td>
+                  <td>19800</td>
+                  <td>1<small>st</small></td>
+                </tr>
+                <tr>
+                  <td>@yusra_sattar</td>
+                  <td>18700</td>
+                  <td>2<small>nd</small></td>
+                </tr>
+                <tr>
+                  <td>@denzel_ashitey</td>
+                  <td>17800</td>
+                  <td>3<small>rd</small></td>
+                </tr>
+                <tr>
+                  <td>@ernest_kumu</td>
+                  <td>17000</td>
+                  <td>4<small>th</small></td>
+                </tr>
+                <tr>
+                  <td>@enoch_nsiedo</td>
+                  <td>16800</td>
+                  <td>5<small>th</small></td>
+                </tr>
+                <tr>
+                  <td>@rodney_papi</td>
+                  <td>15800</td>
+                  <td>6<small>th</small></td>
+                </tr>
+                <tr>
+                  <td>@monica_mills</td>
+                  <td>14800</td>
+                  <td>7<small>th</small></td>
+                </tr>
+              </table>
             </div>
-            <div class="history-card">
-              <div class="quiz">
-                <img src="/small-quizimage.png" alt="quiz" />
-                <div class="text">
-                  <div class="quiz-title">Math Drill</div>
-                  <div class="difficulty">Easy</div>
-                </div>
+            <div class="history">
+              <div class="title">
+                <h3>History</h3>
+                <button>See All</button>
               </div>
-              <div class="quiz-score">25 points</div>
-            </div>
-            <div class="history-card">
-              <div class="quiz">
-                <img src="/small-quizimage.png" alt="quiz" />
-                <div class="text">
-                  <div class="quiz-title">Math Drill</div>
-                  <div class="difficulty">Easy</div>
+              <div class="history-card">
+                <div class="quiz">
+                  <img src="/small-quizimage.png" alt="quiz" />
+                  <div class="text">
+                    <div class="quiz-title">Math Drill</div>
+                    <div class="difficulty">Easy</div>
+                  </div>
                 </div>
+                <div class="quiz-score">45 points</div>
               </div>
-              <div class="quiz-score">30 points</div>
-            </div>
-            <div class="history-card">
-              <div class="quiz">
-                <img src="/small-quizimage.png" alt="quiz" />
-                <div class="text">
-                  <div class="quiz-title">Math Drill</div>
-                  <div class="difficulty">Easy</div>
+              <div class="history-card">
+                <div class="quiz">
+                  <img src="/small-quizimage.png" alt="quiz" />
+                  <div class="text">
+                    <div class="quiz-title">Math Drill</div>
+                    <div class="difficulty">Easy</div>
+                  </div>
                 </div>
+                <div class="quiz-score">25 points</div>
               </div>
-              <div class="quiz-score">50 points</div>
+              <div class="history-card">
+                <div class="quiz">
+                  <img src="/small-quizimage.png" alt="quiz" />
+                  <div class="text">
+                    <div class="quiz-title">Math Drill</div>
+                    <div class="difficulty">Easy</div>
+                  </div>
+                </div>
+                <div class="quiz-score">30 points</div>
+              </div>
+              <div class="history-card">
+                <div class="quiz">
+                  <img src="/small-quizimage.png" alt="quiz" />
+                  <div class="text">
+                    <div class="quiz-title">Math Drill</div>
+                    <div class="difficulty">Easy</div>
+                  </div>
+                </div>
+                <div class="quiz-score">50 points</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- dashboard content -->
     </div>
     <script type="module" src="/src/dashboard.js"></script>
   </body>

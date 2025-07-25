@@ -18,7 +18,7 @@ box-sizing: border-box;
 body {
 background: #F4F7FE;
 font-family: Quicksand, sans-serif;
-padding: 20px;
+/* padding-inline: 20px; */
 height: 100vh;
 }
 
@@ -26,6 +26,30 @@ height: 100vh;
 display: flex;
 gap: 20px;
 height: calc(100vh - 40px);
+}
+
+.float-sidebar {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding-inline: 24px;
+    padding-block: 5px;
+}
+
+.float-sidebar img {
+    min-width: 35px;
+}
+
+.float-sidebar p {
+    font-weight: 600;
+}
+
+.greeting {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text)
 }
 
 .sidebar {
@@ -196,15 +220,12 @@ text-align: center;
 }
 
 .main-content {
-flex: 1;
-background: white;
-border-radius: 16px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 24px;
-color: #666;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    background: white;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* Subtle animations for kids */
@@ -226,18 +247,28 @@ border-radius: 2px;
     gap: 2rem;
     height: 100%;
     width: 100%;
+}
+
+.main-content {
+    padding: 1.2rem;
     flex: 6;
+    height: 100%;
 }
 
 .dashboard .left {
-    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 70%;
 }
 
 .dashboard .right {
-    flex: 1.2;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     gap: 2rem;
+    flex-direction: column;
+    width: 30%;
 }
 .dashboard .left .header {
     display: flex;
@@ -282,9 +313,6 @@ border-radius: 2px;
 }
 
 /* games section */
-.games {
-    padding-block-start: 2.5rem;
-}
 
 .games h3 {
     color: var(--text);
@@ -294,7 +322,9 @@ border-radius: 2px;
 
 .cards {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    gap: 1.5rem;
 }
 
 .cards .card {
@@ -305,11 +335,13 @@ border-radius: 2px;
     gap: 15px;
     border-radius: 21px;
     color: var(--text);
+    position: relative;
 }
 
 .cards .card img {
     border-radius: 21px;
     max-width: 308px;
+    width: 100%;
 }
 
 .cards .card .info-holder {
@@ -321,6 +353,10 @@ border-radius: 2px;
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.cards .card .info-holder .score img {
+    max-width: 30px;
 }
 
 .cards .card .info-holder .name p{
@@ -434,4 +470,44 @@ table.headings {
 
 .history-card .quiz .text .quiz-title {
     font-weight: 600;
+}
+
+/* media queries here */
+@media (max-width: 1300px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-content .dashboard{
+        flex-direction: column;
+        gap: 7rem;
+    }
+    .main-content .dashboard .left, .main-content .dashboard .right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-content .dashboard .dashboard-header {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .main-content .dashboard p {
+        width: 100%;
+    }
+    .dashboard .left .greeting {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+    }
+    .cards .card img {
+        width: 100%;
+        max-width: 100%;
+    }
 }
